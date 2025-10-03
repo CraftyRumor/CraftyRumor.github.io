@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banco de Horas</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1>Banco de Horas</h1>
+      <p>Controle simples e prático do seu saldo diário</p>
+    </header>
+
+    <main>
+      <form id="registroForm" class="card">
+        <div class="input-group">
+          <label for="entrada">Entrada</label>
+          <input type="time" id="entrada" required>
+        </div>
+        <div class="input-group">
+          <label for="saida">Saída</label>
+          <input type="time" id="saida" required>
+        </div>
+        <button type="submit" class="btn">Registrar</button>
+      </form>
+
+      <section class="card saldo-card">
+        <h2>Saldo Acumulado</h2>
+        <p id="saldoDisplay" class="saldo">00:00</p>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js")
+        .then(() => console.log("Service Worker registrado"))
+        .catch(err => console.error("Erro ao registrar SW:", err));
+    }
+  </script>
+</body>
+</html>
