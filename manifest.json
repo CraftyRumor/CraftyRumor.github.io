@@ -1,10 +1,14 @@
 {
   "name": "Banco de Horas",
   "short_name": "BancoHoras",
-  "start_url": "./index.html",
+  "description": "Controle simples e prático do seu banco de horas.",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#0d6efd",
+  "background_color": "#121212",
+  "theme_color": "#6C63FF",
+  "orientation": "portrait",
+  "id": "https://craftyrumor.github.io/",
   "icons": [
     {
       "src": "icon-192.png",
